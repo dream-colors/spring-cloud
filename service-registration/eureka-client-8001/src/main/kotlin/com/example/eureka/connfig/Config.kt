@@ -1,4 +1,4 @@
-package com.example.eurekaClient.connfig
+package com.example.eureka.connfig
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced
 import org.springframework.context.annotation.Bean

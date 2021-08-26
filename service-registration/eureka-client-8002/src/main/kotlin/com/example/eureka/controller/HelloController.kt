@@ -1,4 +1,4 @@
-package com.example.eurekaClient.controller
+package com.example.eureka.controller
 
 import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient
 import org.springframework.web.bind.annotation.GetMapping

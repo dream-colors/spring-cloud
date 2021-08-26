@@ -1,4 +1,4 @@
-package com.example.euerkaserver
+package com.example.euerka
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
