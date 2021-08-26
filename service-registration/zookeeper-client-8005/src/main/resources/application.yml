@@ -1,0 +1,9 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: zookeeper-client-8005
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2181 # 192.168.111.144:2181 #
