@@ -1,0 +1,20 @@
+server:
+  port: 8764
+
+eureka:
+  instance:
+    hostname: eurka-server-8764
+  client:
+    # 指示此实例是否应向 eureka 服务器注册其信息以供其他人发现。 在某些情况下，您不希望您的实例被发现，而您只想发现其他实例。
+    register-with-eureka: false
+    # 指示此客户端是否应从 eureka 服务器获取 eureka 注册表信息
+    fetch-registry: false
+    serviceUrl:
+      # 单机模式
+      # defaultZone: http://localhost:8764/eureka/
+      # 集群模式，相互注册、相互守望
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: eurka-server-8764

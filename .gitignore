@@ -1,0 +1,4 @@
+# 项目排除路径
+/eureka/eureka-client-8762/target/
+/eureka/eureka-client-8763/target/
+/eureka/eureka-client-8765/target/
