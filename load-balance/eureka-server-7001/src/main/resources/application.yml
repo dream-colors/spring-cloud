@@ -1,0 +1,24 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: eurka-server-7001
+  client:
+    # 指示此实例是否应向 eureka 服务器注册其信息以供其他人发现。 在某些情况下，您不希望您的实例被发现，而您只想发现其他实例。
+    register-with-eureka: false
+    # 指示此客户端是否应从 eureka 服务器获取 eureka 注册表信息
+    fetch-registry: false
+    serviceUrl:
+      # 单机模式
+      defaultZone: http://localhost:7001/eureka/
+      # 集群模式，相互注册、相互守望
+      #defaultZone: http://localhost:7002/eureka/
+  server:
+    # 关闭自我保护机制，保证不可用服务被及时踢除
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000
+
+spring:
+  application:
+    name: eurka-server-7001

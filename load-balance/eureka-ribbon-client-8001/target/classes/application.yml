@@ -1,0 +1,13 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: eureka-ribbon-client-consumer
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
