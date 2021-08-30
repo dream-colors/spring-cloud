@@ -3,15 +3,11 @@ server:
 
 spring:
   application:
-    name: customer-server
-  # zookeeper配置
-  cloud:
-    zookeeper:
-      connect-string: 127.0.0.1:2181 # 192.168.111.144:2181 #
+    name: eureka-client
 
 eureka:
   instance:
-    instance-id: customer-server-8003
+    instance-id: eureka-client-8003
     prefer-ip-address: true
     #心跳检测与续约时间
     #开发时没置小些，保证服务关闭后注册中心能即使剔除服务

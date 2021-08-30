@@ -25,6 +25,7 @@
 
         <module>eureka-server-7001</module>
         <module>eureka-server-7002</module>
+        <module>eureka-security-server-7003</module>
 
 
     </modules>

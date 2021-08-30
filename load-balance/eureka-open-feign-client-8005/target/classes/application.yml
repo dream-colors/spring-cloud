@@ -1,13 +1,13 @@
 server:
-  port: 8002
+  port: 8005
 
 spring:
   application:
-    name: eureka-ribbon-client-provider
+    name: eureka-open-feign-client-provider
 
 eureka:
   instance:
-    instance-id: eureka-ribbon-client-8002
+    instance-id: eureka-open-feign-client-8005
     prefer-ip-address: true
   client:
     register-with-eureka: true

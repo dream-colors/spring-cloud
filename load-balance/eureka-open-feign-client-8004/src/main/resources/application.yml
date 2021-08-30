@@ -3,11 +3,28 @@ server:
 
 spring:
   application:
-    name: eureka-open-feign-client-consumer
+    name: eureka-open-feign-client-client
+
+#设置feign客户端超时时间(OpenFeign默认支持ribbon)(单位：毫秒)
+ribbon:
+  #指的是建立连接所用的时间，适用于网络状况正常的情况下,两端连接所用的时间
+  ReadTimeout: 3000
+  #指的是建立连接后从服务器读取到可用资源所用的时间
+  ConnectTimeout: 3000
 
 eureka:
+  instance:
+    instance-id: eureka-open-feign-client-8004
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
+      # 向服务端注册自己
       defaultZone: http://localhost:7001/eureka/
+
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    pers.meteor.eurekaOpenFeign.service.CustomerService: debug
+

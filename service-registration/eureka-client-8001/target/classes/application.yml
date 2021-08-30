@@ -3,16 +3,11 @@ server:
 
 spring:
   application:
-    name: customer-client
-  # zookeeper配置
-  cloud:
-    zookeeper:
-      connect-string: 127.0.0.1:2181 # 192.168.111.144:2181 #
+    name: eureka-client
 
-
-#eureka:
-#  client:
-#    register-with-eureka: true
-#    fetch-registry: true
-#    serviceUrl:
-#      defaultZone: http://localhost:7001/eureka/, http://localhost:7002/eureka/
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://root:root@localhost:7001/eureka/, http://root:root@localhost:7002/eureka/
