@@ -23,6 +23,8 @@
         <module>eureka-open-feign-client-8004</module>
         <module>eureka-open-feign-client-8005</module>
         <module>eureka-open-feign-client-8006</module>
+        <module>eureka-hystrix-client-8007</module>
+        <module>eureka-hystrix-client-8008</module>
 
         <module>eureka-server-7001</module>
     </modules>

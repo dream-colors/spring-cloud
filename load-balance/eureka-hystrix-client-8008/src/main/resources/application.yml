@@ -1,0 +1,21 @@
+server:
+  port: 8008
+
+spring:
+  application:
+    name: eureka-hystrix-consumer-8008
+
+eureka:
+  instance:
+    instance-id: eureka-hystrix-consumer-8008
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      # 向服务端注册自己
+      defaultZone: http://localhost:7001/eureka/
+
+feign:
+  hystrix:
+    enabled: true
