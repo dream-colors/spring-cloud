@@ -1,0 +1,26 @@
+server:
+    port: 7001
+
+spring:
+    application:
+        name: eureka-hystrix-server
+    security:
+        user:
+            name: root
+            password: root
+eureka:
+    instance:
+        # 指定本实例名称
+        hostname: eureka-hystrix-server-7001
+        # 显示ip地址
+        ip-address: true
+    client:
+        # 指示此客户端是否应从 eureka 服务器获取 eureka 注册表信息
+        fetch-registry: false
+        # 指示此实例是否应向 eureka 服务器注册其信息以供其他人发现。 在某些情况下，您不希望您的实例被发现，而您只想发现其他实例
+        register-with-eureka: false
+        # 可用区映射到与 eureka 服务器通信的完全限定 URL 列表。 每个值可以是单个 URL 或逗号分隔的替代位置列表。
+        # 通常，尤里卡服务器 URL 携带协议、主机、端口、上下文和版本信息（如果有）。
+        # 示例：https://ec2-256-156-243-129.compute-1.amazonaws.com:7001/eureka/
+        service-url:
+            defaultZone: http://root:root@localhost:7001/eureka

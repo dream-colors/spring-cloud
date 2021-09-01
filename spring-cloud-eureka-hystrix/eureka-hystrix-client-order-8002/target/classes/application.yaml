@@ -1,0 +1,16 @@
+server:
+    port: 8002
+
+spring:
+    application:
+        name: eureka-hystrix-client-order
+
+eureka:
+    instance:
+        hostname: eureka-hystrix-client-order-8002
+        ip-address: true
+    client:
+        register-with-eureka: true
+        fetch-registry: true
+        service-url:
+            defaultZone: http://root:root@localhost:7001/eureka

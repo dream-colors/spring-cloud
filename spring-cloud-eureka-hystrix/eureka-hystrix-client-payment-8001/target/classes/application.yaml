@@ -1,0 +1,16 @@
+server:
+    port: 8001
+
+spring:
+    application:
+        name: eureka-hystrix-client-payment
+
+eureka:
+    instance:
+        hostname: eureka-hystrix-client-payment-8001
+        ip-address: true
+    client:
+        register-with-eureka: true
+        fetch-registry: true
+        service-url:
+            defaultZone: http://root:root@localhost:7001/eureka
